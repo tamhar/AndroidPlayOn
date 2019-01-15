@@ -12,4 +12,27 @@
 
     </com.pierfrancescosoffritti.androidyoutubeplayer.player.YouTubePlayerView>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/prev_video_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="26dp"
+            android:backgroundTint="@android:color/white"
+            android:text="Play Prev Video" />
+        <Button
+            android:id="@+id/next_video_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="26dp"
+            android:backgroundTint="@android:color/white"
+            android:text="Play Next Video" />
+    </LinearLayout>
+
 </LinearLayout>

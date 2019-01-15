@@ -12,20 +12,27 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.arrizky.kabaddi.Helper.DatabaseHandler;
+import com.example.arrizky.kabaddi.Helper.User;
+
 public class Login extends AppCompatActivity {
 
     Button login, daftar;
-    EditText user, pass;
+    EditText uname, pass;
+    DatabaseHandler dbhelper;
+    User user;
     private ProgressDialog prog;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        user = (EditText) findViewById(R.id.user);
+        uname = (EditText) findViewById(R.id.user);
         pass = (EditText) findViewById(R.id.pass);
         login = (Button) findViewById(R.id.signin);
         daftar = (Button) findViewById(R.id.signup);
+        dbhelper = new DatabaseHandler(Login.this);
+        user = new User();
         toLogin();
         toDaftar();
     }
@@ -34,9 +41,16 @@ public class Login extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(Login.this,video.class);
-                startActivity(i);
-                finish();
+                user.setUsername(uname.getText().toString().trim());
+                user.setPassword(pass.getText().toString().trim());
+                if(dbhelper.checkUser(user)){
+                    Intent i = new Intent(Login.this,Menu.class);
+                    startActivity(i);
+                    finish();
+                }else{
+                    Toast.makeText(Login.this, "Username / Password Salah", Toast.LENGTH_LONG).show();
+                }
+
             }
         });
     }

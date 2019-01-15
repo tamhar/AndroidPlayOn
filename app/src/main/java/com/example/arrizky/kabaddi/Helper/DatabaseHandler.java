@@ -47,13 +47,13 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         db.close();
     }
 
-    public boolean checkUser(String user, String pass){
+    public boolean checkUser(User user){
         String[] kolom = {
                 KOLOM_ID
         };
         SQLiteDatabase db = this.getReadableDatabase();
         String selection = KOLOM_USER + " = ? " + " AND " + KOLOM_PASS + " = ?";
-        String[] selectionargs = {user, pass};
+        String[] selectionargs = {user.getUsername(), user.getPassword()};
 
         Cursor cursor = db.query(TABLE_NAME, kolom, selection, selectionargs, null, null, null);
         int cursorCount = cursor.getCount();
