@@ -19,7 +19,11 @@
         <activity android:name=".Daftar" />
         <activity android:name=".Login" />
         <activity android:name=".MainActivity" />
-        <activity android:name=".Menu"></activity>
+        <activity android:name=".Menu" />
+        <activity android:name=".kabaddi" />
+        <activity android:name=".video" />
+        <activity android:name=".info" />
+        <activity android:name=".bantuan"></activity>
     </application>
 
 </manifest>

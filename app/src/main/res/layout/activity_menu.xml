@@ -12,14 +12,16 @@
         android:orientation="horizontal"
         android:layout_weight="1"
         android:weightSum="2">
-        <Button
+        <ImageButton
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"/>
-        <Button
+            android:layout_weight="1"
+            android:background="@drawable/ic_accessibility_150dp"/>
+        <ImageButton
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:background="@drawable/ic_play_arrow_150dp"/>
 
     </LinearLayout>
     <LinearLayout
@@ -33,7 +35,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:id="@+id/Bbantuan"
-            android:background="@drawable/ic_help_150dp" "
+            android:background="@drawable/ic_help_150dp"
             />
         <ImageButton
             android:layout_width="0dp"
