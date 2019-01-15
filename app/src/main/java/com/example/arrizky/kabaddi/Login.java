@@ -34,7 +34,7 @@ public class Login extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(Login.this,Menu.class);
+                Intent i = new Intent(Login.this,video.class);
                 startActivity(i);
                 finish();
             }
