@@ -44,7 +44,7 @@ public class Menu extends AppCompatActivity {
     }
 
     private void bantuanClick(){
-        video.setOnClickListener(new View.OnClickListener() {
+        bantuan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(Menu.this,bantuan.class);
@@ -54,7 +54,7 @@ public class Menu extends AppCompatActivity {
     }
 
     private void infoClick(){
-        video.setOnClickListener(new View.OnClickListener() {
+        info.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(Menu.this,info.class);
